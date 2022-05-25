@@ -45,7 +45,7 @@ public class UI {
 		return new ChessPosition(column, row);
 		}
 		catch (RuntimeException e) {
-			throw new InputMismatchException("Digite um valor valido, de a1 até h8.");
+			throw new InputMismatchException("Digite um valor valido, de a1 ate h8.");
 		}
 	}
 	
@@ -56,6 +56,9 @@ public class UI {
 		System.out.println();
 		System.out.println("Turno: " + chessMatch.getTurn());
 		System.out.println("Esperando o jogador: " + chessMatch.getCurrentPlayer());
+		if(chessMatch.getCheck()) {
+			System.out.println("Xeque");
+		}
 	}
 
 	public static void printBoard(ChessPiece[][] pieces) {
